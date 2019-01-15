@@ -1,1 +1,17 @@
-[]
+[
+  {
+    "path": "posts/welcome/",
+    "title": "Welcome to Time Travel Movie Club",
+    "description": "Welcome to our new blog, Time Travel Movie Club. We hope you enjoy \nreading what we have to say!",
+    "author": [
+      {
+        "name": "Will Bishop",
+        "url": "https://example.com/norajones"
+      }
+    ],
+    "date": "2019-01-15",
+    "categories": [],
+    "preview": {},
+    "last_modified": "2019-01-15T12:44:59-08:00"
+  }
+]
