@@ -1,0 +1,12 @@
+name: "time-travel-movie-club"
+title: "Time Travel Movie Club"
+description: |
+  Time Travel Movie Club
+output_dir: "docs"
+navbar:
+  right:
+    - text: "Home"
+      href: index.html
+    - text: "About"
+      href: about.html
+output: radix::radix_article
