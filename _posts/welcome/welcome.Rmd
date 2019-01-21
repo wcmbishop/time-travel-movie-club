@@ -10,6 +10,8 @@ date: 2019-01-15
 output:
   radix::radix_article:
     self_contained: false
+twitter:
+  creator: "@wcmbishop"
 ---
 
 ```{r setup, include=FALSE}

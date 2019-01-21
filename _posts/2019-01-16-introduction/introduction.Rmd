@@ -1,0 +1,44 @@
+---
+title: "Time Travel Movie Club"
+description: |
+  A short description of the post.
+author:
+  - name: Will Bishop
+date: 2019-01-16
+output:
+  radix::radix_article:
+    self_contained: false
+# preview: images/screen-shot.png
+twitter:
+  creator: "@wcmbishop"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+Radix is a publication format for scientific and technical writing, native to the web.
+
+Learn more about using Radix at <https://rstudio.github.io/radix>.
+
+```{r, layout="l-body-outset", preview=TRUE}
+library(dplyr)
+library(tibble)
+library(magrittr)
+library(ggplot2)
+
+wd <- getwd()
+base_dir <- strsplit(wd, "/_posts")[[1]][1]
+# imdb_movies <- readRDS(file = file.path("data", "imdb_movies.rds"))
+imdb_movies <- readRDS(file = file.path(base_dir, "data", "imdb_movies.rds"))
+decade_years <- seq(1929, 2019, by = 10)
+
+decade_movies <- imdb_movies %>% 
+  filter(year %in% decade_years) %>% 
+  mutate(rating_int = round(rating_avg))
+
+ggplot(decade_movies, aes(as.factor(year))) +
+  geom_bar(aes(fill = as.factor(rating_int))) +
+  labs(x = "year", fill = "rating")
+```
+
