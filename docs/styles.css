@@ -1,0 +1,10 @@
+.radix-site-header .logo img {
+  display: inline-block;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  max-height: 40px;
+  width: auto;
+  margin-bottom: 5px;
+  padding-right: 5px;
+  vertical-align: middle;
+}

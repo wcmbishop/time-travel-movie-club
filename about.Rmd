@@ -1,9 +1,40 @@
 ---
-title: "About this blog"
+title: "About T.T.M.C."
 description: |
-  Some additional details about the blog
+  The basics on the Time Travel Movie Club
+repository_url: https://github.com/wcmbishop/time-travel-movie-club
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
+
+library(dplyr)
+library(gt)
+library(tibble)
+library(tidyr)
 ```
+
+This a blog about movies. It chronicles the **Time Travel Movie Club**, which is an experiment to explore film across ten decades. For a given year, we pick a theme and travel back in time to take a look at films from exactly 10, 20, 30....to 90 years ago -- one film (and decade) per month. 
+
+```{r layout="l-body-outset", fig.height=1.5, fig.width=7}
+years <- seq(1929, 2019, by = 10)
+data <- tibble(
+  month = month.abb,
+  film_year = c(years, "???9", "???9")
+)
+
+data %>% 
+  spread(key = month, value = film_year) %>% 
+  select(!!month.abb) %>% 
+  mutate(rowname = "film year") %>% 
+  gt(rowname_col = "rowname") %>%
+  tab_header(
+    title = "TTMC 2019 Schedule"
+  )
+```
+
+
+## Acknowledgments {.appendix}
+
+This blog website was built with the [radix](https://rstudio.github.io/radix) package from [RStudio](https://www.rstudio.com).
+

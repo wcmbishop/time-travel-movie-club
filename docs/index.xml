@@ -6,25 +6,23 @@
     <atom:link href="https://wcmbishop.github.io/time-travel-movie-club/index.xml" rel="self" type="application/rss+xml"/>
     <description>Ten Decades of Film, broadcast at 12fpy
 </description>
-    <generator>Radix</generator>
-    <lastBuildDate>Wed, 16 Jan 2019 00:00:00 +0000</lastBuildDate>
-    <item>
+    <image>
       <title>Time Travel Movie Club</title>
-      <dc:creator>Will Bishop</dc:creator>
-      <link>https://wcmbishop.github.io/time-travel-movie-club/posts/2019-01-16-introduction</link>
-      <description>A short description of the post.</description>
-      <guid>https://wcmbishop.github.io/time-travel-movie-club/posts/2019-01-16-introduction</guid>
-      <pubDate>Wed, 16 Jan 2019 00:00:00 +0000</pubDate>
-      <media:content url="https://wcmbishop.github.io/time-travel-movie-club/posts/2019-01-16-introduction/introduction_files/figure-html5/unnamed-chunk-1-1.png" medium="image" type="image/png" width="1152" height="768"/>
-    </item>
+      <url>https://wcmbishop.github.io/time-travel-movie-club/images/favicon.ico</url>
+      <link>https://wcmbishop.github.io/time-travel-movie-club</link>
+    </image>
+    <generator>Radix</generator>
+    <lastBuildDate>Tue, 29 Jan 2019 00:00:00 +0000</lastBuildDate>
     <item>
-      <title>Welcome to Time Travel Movie Club</title>
+      <title>Introduction</title>
       <dc:creator>Will Bishop</dc:creator>
-      <link>https://wcmbishop.github.io/time-travel-movie-club/posts/welcome</link>
-      <description>Welcome to our new blog, Time Travel Movie Club. We hope you enjoy 
-reading what we have to say!</description>
-      <guid>https://wcmbishop.github.io/time-travel-movie-club/posts/welcome</guid>
-      <pubDate>Tue, 15 Jan 2019 00:00:00 +0000</pubDate>
+      <link>https://wcmbishop.github.io/time-travel-movie-club/posts/2019-01-29-introduction</link>
+      <description>Welcome! This post provides a brief introduction to the Time Travel Movie 
+Club - what it is and where we'll be going. Ten decades of film, broadcast 
+at 12fpy.</description>
+      <guid>https://wcmbishop.github.io/time-travel-movie-club/posts/2019-01-29-introduction</guid>
+      <pubDate>Tue, 29 Jan 2019 00:00:00 +0000</pubDate>
+      <media:content url="https://wcmbishop.github.io/time-travel-movie-club/posts/2019-01-29-introduction/images/camera-in-the-fog.jpg" medium="image" type="image/jpeg"/>
     </item>
   </channel>
 </rss>

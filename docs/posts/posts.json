@@ -1,34 +1,17 @@
 [
   {
-    "path": "posts/2019-01-16-introduction/",
-    "title": "Time Travel Movie Club",
-    "description": "A short description of the post.",
+    "path": "posts/2019-01-29-introduction/",
+    "title": "Introduction",
+    "description": "Welcome! This post provides a brief introduction to the Time Travel Movie \nClub - what it is and where we'll be going. Ten decades of film, broadcast \nat 12fpy.",
     "author": [
       {
         "name": "Will Bishop",
         "url": {}
       }
     ],
-    "date": "2019-01-16",
+    "date": "2019-01-29",
     "categories": [],
-    "preview": "posts/2019-01-16-introduction/introduction_files/figure-html5/unnamed-chunk-1-1.png",
-    "last_modified": "2019-01-20T12:52:56-08:00",
-    "preview_width": 1152,
-    "preview_height": 768
-  },
-  {
-    "path": "posts/welcome/",
-    "title": "Welcome to Time Travel Movie Club",
-    "description": "Welcome to our new blog, Time Travel Movie Club. We hope you enjoy \nreading what we have to say!",
-    "author": [
-      {
-        "name": "Will Bishop",
-        "url": "https://example.com/norajones"
-      }
-    ],
-    "date": "2019-01-15",
-    "categories": [],
-    "preview": {},
-    "last_modified": "2019-01-15T12:44:59-08:00"
+    "preview": "posts/2019-01-29-introduction/images/camera-in-the-fog.jpg",
+    "last_modified": "2019-01-29T23:56:43-08:00"
   }
 ]
