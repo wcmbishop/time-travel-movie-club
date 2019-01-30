@@ -10,7 +10,7 @@ preview: https://wcmbishop.github.io/time-travel-movie-club/images/logo/black-ca
 favicon: images/favicon.ico
 navbar:
   logo:
-    image: images/logo/blue-reel.png
+    image: images/logo/simple-blue.png
   right:
     - text: "Home"
       href: index.html
