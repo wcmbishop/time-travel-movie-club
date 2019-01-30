@@ -2,7 +2,7 @@
   {
     "path": "posts/2019-01-29-introduction/",
     "title": "Introduction",
-    "description": "Welcome! This post provides an introduction to the Time Travel Movie \nClub - what it is and where we'll be going. Ten decades of film, broadcast \nat 12fpy.",
+    "description": "Welcome! This post provides an introduction to the Time Travel Movie \nClub - what it is and where we'll be going. Ten decades of film, viewed \nat 12fpy.",
     "author": [
       {
         "name": "Will Bishop",
@@ -12,6 +12,6 @@
     "date": "2019-01-29",
     "categories": [],
     "preview": "posts/2019-01-29-introduction/images/camera-in-the-fog.jpg",
-    "last_modified": "2019-01-30T00:21:47-08:00"
+    "last_modified": "2019-01-30T10:54:27-08:00"
   }
 ]

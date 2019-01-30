@@ -2,7 +2,7 @@
 title: "Introduction"
 description: |
   Welcome! This post provides an introduction to the Time Travel Movie 
-  Club - what it is and where we'll be going. Ten decades of film, broadcast 
+  Club - what it is and where we'll be going. Ten decades of film, viewed 
   at 12fpy.
 author:
   - name: Will Bishop
@@ -27,11 +27,11 @@ library(tidyr)
 
 ## The Concept
 
-For a long time, I've thought a great idea for a movie club would be to watch movies from decades past. You could travel back in time and watch movies from exactly 20 years ago for example. Or 30 years, or 40 years. You would get this small slice of film history to browse through, a time-capsule defined in relation to the present. And each new year you could browse the next slice of history.
+For a long time, I've thought a great idea for a movie club would be to watch movies from decades past. You could travel back in time and watch films from exactly 20 years ago for example. Or 30 years, or 40 years. You would get this small slice of film history to browse through, a 12-month time-capsule defined in relation to the present. And each new year you could browse the next slice of history.
 
-Sounds like a good excuse to watch great movies! So, I figured I could formalize this into a club -- the **Time Travel Movie Club**. We fly across 10 decades of movies over the course of a year, picking 1 film a month from each decade's annual time-capsule. Take 2019 for example: in January we would pick from 1929, in February from 1939, and so on skipping through the decades up to 2019. Two extra months (November and December) give us two "wild card" slots to play with, picking from any of the years we've covered.
+One way to implement this is to spread the selections across many decades, picking 1 film from each decade's annual time-capsule. Here are the time-capsule years for 2019:
 
-```{r, layout="l-body-outset", fig.height=1.5, fig.width=7}
+```{r, fig.height=1.5, fig.width=7}
 years <- seq(1929, 2019, by = 10)
 data <- tibble(
   year = seq(1920, 2020),
@@ -58,10 +58,12 @@ ggplot(data, aes(year, y)) +
   theme(plot.title = element_text(hjust = 0.5, size = 10))
 ```
 
+Sounds like a good excuse to watch great movies! Why not make it into a  club, in a very real and non-binding sense^[requiring not much of anything but some reading of [IMDB](https://www.imdb.com) and watching movies]? An experiment in temporal film discovery. The **Time Travel Movie Club**. Over the course of a year, we sample from 10 decades of film, 1 film per month^[With our extra two months at the end of the year, we get two "wild cards" to pick from any year we want]. The 2019 schedule looks like this:
+
 ```{r layout="l-body-outset", fig.height=1.5, fig.width=7}
 data <- tibble(
   month = month.abb,
-  film_year = c(years, "???9", "???9")
+  film_year = c(years, "????", "????")
 )
 
 data %>% 
@@ -77,11 +79,29 @@ data %>%
 
 ## Theme of the Year
 
-But obviously we need some *more* arbitray constraints! There are too many wonderful films to choose from, even in our year long time-capsules. So let's pick a theme to adhere to -- some (loose) guiding star to steer by as we float through the decades together. I asked some friends to help with this (thanks!), and here are the results. The chart below tallies survey votes from some proposed themes (and a few write-ins). 
+But obviously we need *more* Arbitrary Constraints®! There are too many wonderful films to choose from, even in our year long time-capsules^[for example, [1939](https://www.imdb.com/search/title?year=1939&title_type=feature&) is considered by some to be the single greatest year of cinema!]. So let's pick a theme to adhere to -- i.e. some (loose) guiding star to steer by as we float down the decades. 
+
+To decide on a theme for the first year of **T.T.M.C.**®^[not actually trademarked, but now I know the keyboard shortcut], I asked some friends to help^[thanks friends!!!]. The chart below tallies survey results from some proposed themes (and a few write-ins)^[note: people could vote for more than one theme, and they were *instructed* to vote for two]. 
 
 ```{r layout="l-body-outset", fig.height=4, fig.width=7}
 knitr::include_graphics("images/theme-voting-results.png")
 ```
 
-....and the winner is....**Roadtrip**! Over the course of the year, we'll have to figure out what that means exactly, but I think we have some good films in store. So stay tuned and join us on this journey through 10 decades of movies! We'll be broadcasting at 12 films-per-year, 24 frames-per-second.
+And the winner is.......**Roadtrip**! A journey through time and space. Sometimes with a clear destination, sometimes more of a dander^[dander: a wander with purpose.], but very often transformative to the participants. Think [O Brother, Where Art Thou?](https://www.imdb.com/title/tt0190590), [It Happened One Night](https://www.imdb.com/title/tt0025316), [Little Miss Sunshine](https://www.imdb.com/title/tt0449059), and [The Lord of the Rings](https://www.imdb.com/title/tt0120737).
+Over the course of the year, we'll have to dig in and explore this theme in more detail, but I think we have some good films in store. 
+
+<aside>
+```{r}
+knitr::include_graphics("images/road-trip-sign.jpg")
+```
+</aside>
+
+```{r layout="l-body", fig.height=4, fig.width=7, fig.cap="Photo by Nextvoyage from Pexels"}
+knitr::include_graphics("images/road-trip-road.jpg")
+```
+
+
+## To Be Continued...
+
+So stay tuned and join us on this journey through 10 decades of film! We'll be viewing at 12 films-per-year, 24 frames-per-second. I'll be posting January's 1929 selection shortly!
 

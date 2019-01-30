@@ -3,10 +3,10 @@ title: "Time Travel Movie Club"
 description: |
   Ten Decades of Film, broadcast at 12fpy
 output_dir: "docs"
-exclude: ["data/*.rds", "data-raw/*.R", "temp/*", "README.md"]
+exclude: ["data/*.rds", "data-raw/*.R", "temp/*", "README"]
 base_url: https://wcmbishop.github.io/time-travel-movie-club
 repository_url: https://github.com/wcmbishop/time-travel-movie-club
-preview: images/logo/black-camera-title.png
+preview: https://wcmbishop.github.io/time-travel-movie-club/images/logo/black-camera-title.png
 favicon: images/favicon.ico
 navbar:
   logo:

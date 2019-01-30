@@ -20,7 +20,7 @@ This a blog about movies. It chronicles the **Time Travel Movie Club**, which is
 years <- seq(1929, 2019, by = 10)
 data <- tibble(
   month = month.abb,
-  film_year = c(years, "???9", "???9")
+  film_year = c(years, "????", "????")
 )
 
 data %>% 
