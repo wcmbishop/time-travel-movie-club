@@ -1,0 +1,87 @@
+---
+title: "Introduction"
+description: |
+  Welcome! This post provides a brief introduction to the Time Travel Movie 
+  Club - what it is and where we'll be going. Ten decades of film, broadcast 
+  at 12fpy.
+author:
+  - name: Will Bishop
+date: 2019-01-29
+output:
+  radix::radix_article:
+    self_contained: false
+preview: images/camera-in-the-fog.jpg
+twitter:
+  creator: "@wcmbishop"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+library(dplyr)
+library(ggplot2)
+library(gt)
+library(tibble)
+library(tidyr)
+```
+
+## The Concept
+
+For a long time, I've thought a great idea for a movie club would be to watch movies from decades past. You could travel back in time and watch movies from exactly 20 years ago for example. Or 30 years, or 40 years. You would get this small slice of film history to browse through, a time-capsule defined in relation to the present. And each new year you could browse the next slice of history.
+
+Sounds like a good excuse to watch great movies! So, I figured I could formalize this into a club -- the **Time Travel Movie Club**. We fly across 10 decades of movies over the course of a year, picking 1 film a month from each decade's annual time-capsule. Take 2019 for example: in January we would pick from 1929, in February from 1939, and so on skipping through the decades up to 2019. Two extra months (November and December) give us two "wild card" slots to play with, picking from any of the years we've covered.
+
+```{r, layout="l-body-outset", fig.height=1.5, fig.width=7}
+years <- seq(1929, 2019, by = 10)
+data <- tibble(
+  year = seq(1920, 2020),
+  y = 0,
+  selected = year %in% years
+)
+size <- 18
+ggplot(data, aes(year, y)) +
+  geom_line(size = size, color = "grey60") +
+  geom_segment(data = filter(data, selected == TRUE),
+               aes(x = year, xend = year + 1, y = y, yend = y),
+               size = size, color = "blue4") +
+  geom_segment(x = 2019, xend = 2020, y = 0, yend = 0, 
+               size = size, color = "blue") +
+  geom_text(data = filter(data, selected == TRUE),
+            aes(x = year, y = 0, label = year), 
+            color = "blue4", size = 4, hjust = 0.5, vjust = -3) +
+  scale_y_discrete(expand = expand_scale(mult = c(1, 2))) +
+  scale_x_continuous(expand = expand_scale(add = 4),
+                     breaks = seq(1920, 2020, by = 10)) +
+  labs(x = "year", y = NULL) +
+  theme_minimal(10) +
+  ggtitle("TTMV 2019: Time-Capsule Years") +
+  theme(plot.title = element_text(hjust = 0.5, size = 10))
+```
+
+```{r layout="l-body-outset", fig.height=1.5, fig.width=7}
+data <- tibble(
+  month = month.abb,
+  film_year = c(years, "???9", "???9")
+)
+
+data %>% 
+  spread(key = month, value = film_year) %>% 
+  select(!!month.abb) %>% 
+  mutate(rowname = "film year") %>% 
+  gt(rowname_col = "rowname") %>%
+  tab_header(
+    title = "TTMC 2019 Schedule"
+  )
+```
+
+
+## Theme of the Year
+
+But obviously we need some *more* arbitray constraints! There are too many wonderful films to choose from, even in our year long time-capsules. So let's pick a theme to adhere to -- some (loose) guiding star to steer by as we float through the decades together. I asked some friends to help with this (thanks!), and here are the results. The chart below tallies survey votes from some proposed themes (and a few write-ins). 
+
+```{r layout="l-body-outset", fig.height=4, fig.width=7}
+knitr::include_graphics("images/theme-voting-results.png")
+```
+
+....and the winner is....**Roadtrip**! Over the course of the year, we'll have to figure out what that means exactly, but I think we have some good films in store. So stay tuned and join us on this journey through 10 decades of movies! We'll be broadcasting at 12 films-per-year, 24 frames-per-second.
+

@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
   <meta name="generator" content="radix" />
+  <link rel="alternate" type="application/rss+xml" href="https://wcmbishop.github.io/time-travel-movie-club/index.xml" />
 
   <style type="text/css">
   /* Hide doc at startup (prevent jankiness while JS renders/transforms) */
@@ -21,24 +22,29 @@
   <!--radix_placeholder_meta_tags-->
   <title>Time Travel Movie Club</title>
   
+  <meta property="description" itemprop="description" content="Ten Decades of Film, broadcast at 12fpy"/>
   
+  <link rel="license" href="https://creativecommons.org/licenses/by/4.0/"/>
+  <link rel="icon" type="image/vnd.microsoft.icon" href="images/favicon.ico"/>
   
   
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
   <meta property="og:title" content="Time Travel Movie Club"/>
   <meta property="og:type" content="article"/>
+  <meta property="og:description" content="Ten Decades of Film, broadcast at 12fpy"/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:site_name" content="Time Travel Movie Club"/>
   
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
   <meta property="twitter:title" content="Time Travel Movie Club"/>
+  <meta property="twitter:description" content="Ten Decades of Film, broadcast at 12fpy"/>
   
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","site","listing"]}},"value":[{"type":"character","attributes":{},"value":["Time Travel Movie Club"]},{"type":"character","attributes":{},"value":["radix::radix_website"]},{"type":"character","attributes":{},"value":["posts"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","site","listing"]}},"value":[{"type":"character","attributes":{},"value":["Time Travel Movie Club"]},{"type":"character","attributes":{},"value":["Ten Decades of Film, broadcast at 12fpy\n"]},{"type":"character","attributes":{},"value":["radix::radix_website"]},{"type":"character","attributes":{},"value":["posts"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -376,9 +382,8 @@
   
   </style>
   
-  <link href="site_libs/font-awesome-5.0.13/css/fa-svg-with-js.css" rel="stylesheet"/>
-  <script src="site_libs/font-awesome-5.0.13/js/fontawesome-all.min.js"></script>
-  <script src="site_libs/font-awesome-5.0.13/js/fa-v4-shims.min.js"></script>
+  <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet"/>
+  <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet"/>
   <script src="site_libs/headroom-0.9.4/headroom.min.js"></script>
   <!--/radix_placeholder_navigation_in_header-->
   <!--radix_placeholder_distill-->
@@ -391,6 +396,10 @@
   
   .pandoc-table {
     width: 100%;
+  }
+  
+  .pandoc-table>caption {
+    margin-bottom: 10px;
   }
   
   .pandoc-table th:not([align]) {
@@ -520,6 +529,10 @@
   /* Tweak code blocks (note that this CSS is repeated above in an injection
      into the d-code shadow dom) */
   
+  d-code {
+    overflow-x: auto !important;
+  }
+  
   pre.d-code code.d-code {
     padding-left: 10px;
     font-size: 12px;
@@ -550,6 +563,11 @@
   }
   
   @media(min-width: 768px) {
+  
+  d-code {
+    overflow-x: visible !important;
+  }
+  
   pre.d-code code.d-code  {
       padding-left: 18px;
       font-size: 14px;
@@ -1178,9 +1196,19 @@
     // prevent underline for linked images
     $('a > img').parent().css({'border-bottom' : 'none'});
   
-    // mark figures created by knitr chunks as 100% width
+    // mark non-body figures created by knitr chunks as 100% width
     $('.layout-chunk').each(function(i, val) {
-      $(this).find('img, .html-widget').css('width', '100%');
+      var figures = $(this).find('img, .html-widget');
+      if ($(this).attr('data-layout') !== "l-body") {
+        figures.css('width', '100%');
+      } else {
+        figures.css('max-width', '100%');
+        figures.filter("[width]").each(function(i, val) {
+          var fig = $(this);
+          fig.css('width', fig.attr('width') + 'px');
+        });
+  
+      }
     });
   
     // auto-append index.html to post-preview links in file: protocol
@@ -1201,6 +1229,8 @@
     $('tr.header').parent('thead').parent('table').addClass('pandoc-table');
     $('.kable-table').children('table').addClass('pandoc-table');
   
+    // add figcaption style to table captions
+    $('caption').parent('table').addClass("figcaption");
   
     // initialize posts list
     if (window.init_posts_list)
@@ -1235,8 +1265,22 @@
   <script src="site_libs/webcomponents-2.0.0/webcomponents.js"></script>
   <script src="site_libs/distill-2.2.21/template.v2.js"></script>
   <!--radix_placeholder_site_in_header-->
+  <style type="text/css">
+  .radix-site-header .logo img {
+    display: inline-block;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    max-height: 40px;
+    width: auto;
+    margin-bottom: 5px;
+    padding-right: 5px;
+    vertical-align: middle;
+  }
+  
+  </style>
   <!--/radix_placeholder_site_in_header-->
 
+  <link rel="stylesheet" href="styles.css" type="text/css"/>
 
 </head>
 
@@ -1245,7 +1289,7 @@
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Time Travel Movie Club","authors":[]}
+{"title":"Time Travel Movie Club","description":"Ten Decades of Film, broadcast at 12fpy","authors":[]}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -1253,11 +1297,17 @@
 <header class="header header--fixed" role="banner">
 <nav class="radix-site-nav radix-site-header">
 <div class="nav-left">
+<a class="logo">
+<img src="images/logo/blue-reel.png"/>
+</a>
 <a href="index.html" class="title">Time Travel Movie Club</a>
 </div>
 <div class="nav-right">
 <a href="index.html">Home</a>
 <a href="about.html">About</a>
+<a href="https://github.com/wcmbishop/time-travel-movie-club">
+<i class="fa fa-github"></i>
+</a>
 <a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
 </div>
 </nav>
@@ -1298,7 +1348,7 @@
   padding-bottom: 12px;
 }
 .posts-list {
-  margin-top: 24px;
+  margin-top: 60px;
   margin-bottom: 24px;
 }
 
@@ -1316,8 +1366,7 @@
 
 .posts-list .posts-list-caption {
   grid-column: screen;
-  font-weight: 500;
-  font-size: 40px;
+  font-weight: 400;
 }
 
 .posts-list .post-preview h2 {
@@ -1433,9 +1482,6 @@
 @media(min-width: 768px) {
   .posts-list .post-preview h2 {
     font-size: 26px;
-  }
-  .posts-list {
-    margin-top: 60px;
   }
   .posts-list .post-preview .thumbnail {
     float: right;
@@ -1588,18 +1634,20 @@ function init_posts_list() {
 
 <div class="posts-container posts-apply-limit l-page">
 <div class="posts-list">
-<a href="posts/welcome/" class="post-preview">
+<h1 class="posts-list-caption">Time Travel Movie Club</h1>
+<a href="posts/2019-01-29-introduction/" class="post-preview">
 <script class="post-metadata" type="text/json">{"categories":[]}</script>
 <div class="metadata">
-<div class="publishedDate">Jan. 15, 2019</div>
+<div class="publishedDate">Jan. 29, 2019</div>
 </div>
 <div class="thumbnail">
-<img/>
+<img data-src="posts/2019-01-29-introduction/images/camera-in-the-fog.jpg"/>
 </div>
 <div class="description">
-<h2>Welcome to Time Travel Movie Club</h2>
-<p>Welcome to our new blog, Time Travel Movie Club. We hope you enjoy 
-reading what we have to say!</p>
+<h2>Introduction</h2>
+<p>Welcome! This post provides a brief introduction to the Time Travel Movie 
+Club - what it is and where we'll be going. Ten decades of film, broadcast 
+at 12fpy.</p>
 </div>
 </a>
 </div>
@@ -1611,7 +1659,7 @@ reading what we have to say!</p>
 
 <div class="d-title">
 <h1>Time Travel Movie Club</h1>
-
+<p>Ten Decades of Film, broadcast at 12fpy</p>
 </div>
 
 
@@ -1628,7 +1676,12 @@ reading what we have to say!</p>
 <!--radix_placeholder_site_after_body-->
 <!--/radix_placeholder_site_after_body-->
 <!--radix_placeholder_appendices-->
-<div class="appendix-bottom"></div>
+<div class="appendix-bottom">
+<h3 id="updates-and-corrections">Corrections</h3>
+<p>If you see mistakes or want to suggest changes, please <a href="https://github.com/wcmbishop/time-travel-movie-club/issues/new">create an issue</a> on the source repository.</p>
+<h3 id="reuse">Reuse</h3>
+<p>Text and figures are licensed under Creative Commons Attribution <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Source code is available at <a href="https://github.com/wcmbishop/time-travel-movie-club">https://github.com/wcmbishop/time-travel-movie-club</a>, unless otherwise noted. The figures that have been reused from other sources don't fall under this license and can be recognized by a note in their caption: "Figure from ...".</p>
+</div>
 <!--/radix_placeholder_appendices-->
 <!--radix_placeholder_navigation_after_body-->
 <!--/radix_placeholder_navigation_after_body-->

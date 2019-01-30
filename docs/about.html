@@ -19,29 +19,31 @@
  <!--/radix_placeholder_import_source-->
 
   <!--radix_placeholder_meta_tags-->
-  <title>Time Travel Movie Club: About this blog</title>
+  <title>Time Travel Movie Club: About T.T.M.C.</title>
   
-  <meta property="description" itemprop="description" content="Some additional details about the blog"/>
+  <meta property="description" itemprop="description" content="The basics on the Time Travel Movie Club"/>
   
+  <link rel="license" href="https://creativecommons.org/licenses/by/4.0/"/>
+  <link rel="icon" type="image/vnd.microsoft.icon" href="images/favicon.ico"/>
   
   
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="Time Travel Movie Club: About this blog"/>
+  <meta property="og:title" content="Time Travel Movie Club: About T.T.M.C."/>
   <meta property="og:type" content="article"/>
-  <meta property="og:description" content="Some additional details about the blog"/>
+  <meta property="og:description" content="The basics on the Time Travel Movie Club"/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:site_name" content="Time Travel Movie Club"/>
   
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="Time Travel Movie Club: About this blog"/>
-  <meta property="twitter:description" content="Some additional details about the blog"/>
+  <meta property="twitter:title" content="Time Travel Movie Club: About T.T.M.C."/>
+  <meta property="twitter:description" content="The basics on the Time Travel Movie Club"/>
   
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description"]}},"value":[{"type":"character","attributes":{},"value":["About this blog"]},{"type":"character","attributes":{},"value":["Some additional details about the blog"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","repository_url"]}},"value":[{"type":"character","attributes":{},"value":["About T.T.M.C."]},{"type":"character","attributes":{},"value":["The basics on the Time Travel Movie Club\n"]},{"type":"character","attributes":{},"value":["https://github.com/wcmbishop/time-travel-movie-club"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -379,9 +381,8 @@
   
   </style>
   
-  <link href="site_libs/font-awesome-5.0.13/css/fa-svg-with-js.css" rel="stylesheet"/>
-  <script src="site_libs/font-awesome-5.0.13/js/fontawesome-all.min.js"></script>
-  <script src="site_libs/font-awesome-5.0.13/js/fa-v4-shims.min.js"></script>
+  <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet"/>
+  <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet"/>
   <script src="site_libs/headroom-0.9.4/headroom.min.js"></script>
   <!--/radix_placeholder_navigation_in_header-->
   <!--radix_placeholder_distill-->
@@ -394,6 +395,10 @@
   
   .pandoc-table {
     width: 100%;
+  }
+  
+  .pandoc-table>caption {
+    margin-bottom: 10px;
   }
   
   .pandoc-table th:not([align]) {
@@ -523,6 +528,10 @@
   /* Tweak code blocks (note that this CSS is repeated above in an injection
      into the d-code shadow dom) */
   
+  d-code {
+    overflow-x: auto !important;
+  }
+  
   pre.d-code code.d-code {
     padding-left: 10px;
     font-size: 12px;
@@ -553,6 +562,11 @@
   }
   
   @media(min-width: 768px) {
+  
+  d-code {
+    overflow-x: visible !important;
+  }
+  
   pre.d-code code.d-code  {
       padding-left: 18px;
       font-size: 14px;
@@ -1181,9 +1195,19 @@
     // prevent underline for linked images
     $('a > img').parent().css({'border-bottom' : 'none'});
   
-    // mark figures created by knitr chunks as 100% width
+    // mark non-body figures created by knitr chunks as 100% width
     $('.layout-chunk').each(function(i, val) {
-      $(this).find('img, .html-widget').css('width', '100%');
+      var figures = $(this).find('img, .html-widget');
+      if ($(this).attr('data-layout') !== "l-body") {
+        figures.css('width', '100%');
+      } else {
+        figures.css('max-width', '100%');
+        figures.filter("[width]").each(function(i, val) {
+          var fig = $(this);
+          fig.css('width', fig.attr('width') + 'px');
+        });
+  
+      }
     });
   
     // auto-append index.html to post-preview links in file: protocol
@@ -1204,6 +1228,8 @@
     $('tr.header').parent('thead').parent('table').addClass('pandoc-table');
     $('.kable-table').children('table').addClass('pandoc-table');
   
+    // add figcaption style to table captions
+    $('caption').parent('table').addClass("figcaption");
   
     // initialize posts list
     if (window.init_posts_list)
@@ -1238,8 +1264,22 @@
   <script src="site_libs/webcomponents-2.0.0/webcomponents.js"></script>
   <script src="site_libs/distill-2.2.21/template.v2.js"></script>
   <!--radix_placeholder_site_in_header-->
+  <style type="text/css">
+  .radix-site-header .logo img {
+    display: inline-block;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    max-height: 40px;
+    width: auto;
+    margin-bottom: 5px;
+    padding-right: 5px;
+    vertical-align: middle;
+  }
+  
+  </style>
   <!--/radix_placeholder_site_in_header-->
 
+  <link rel="stylesheet" href="styles.css" type="text/css"/>
 
 </head>
 
@@ -1248,7 +1288,7 @@
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"About this blog","description":"Some additional details about the blog","authors":[]}
+{"title":"About T.T.M.C.","description":"The basics on the Time Travel Movie Club","authors":[]}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -1256,11 +1296,17 @@
 <header class="header header--fixed" role="banner">
 <nav class="radix-site-nav radix-site-header">
 <div class="nav-left">
+<a class="logo">
+<img src="images/logo/blue-reel.png"/>
+</a>
 <a href="index.html" class="title">Time Travel Movie Club</a>
 </div>
 <div class="nav-right">
 <a href="index.html">Home</a>
 <a href="about.html">About</a>
+<a href="https://github.com/wcmbishop/time-travel-movie-club">
+<i class="fa fa-github"></i>
+</a>
 <a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
 </div>
 </nav>
@@ -1270,13 +1316,295 @@
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>About this blog</h1>
-<p>Some additional details about the blog</p>
+<h1>About T.T.M.C.</h1>
+<p>The basics on the Time Travel Movie Club</p>
 </div>
 
 
 <div class="d-article">
+<p>This a blog about movies. It chronicles the <strong>Time Travel Movie Club</strong>, which is an experiment to explore film across ten decades. For a given year, we pick a theme and travel back in time to take a look at films from exactly 10, 20, 30….to 90 years ago – one film (and decade) per month.</p>
+<div class="layout-chunk" data-layout="l-body-outset">
+<style>html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+}
 
+#tslkwuucqk .gt_table {
+  display: table;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  color: #000000;
+  font-size: 16px;
+  background-color: #FFFFFF;
+  /* table.background.color */
+  width: auto;
+  /* table.width */
+  border-top-style: solid;
+  /* table.border.top.style */
+  border-top-width: 2px;
+  /* table.border.top.width */
+  border-top-color: #A8A8A8;
+  /* table.border.top.color */
+}
+
+#tslkwuucqk .gt_heading {
+  background-color: #FFFFFF;
+  /* heading.background.color */
+  border-bottom-color: #FFFFFF;
+}
+
+#tslkwuucqk .gt_title {
+  color: #000000;
+  font-size: 125%;
+  /* heading.title.font.size */
+  padding-top: 4px;
+  /* heading.top.padding */
+  padding-bottom: 1px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#tslkwuucqk .gt_subtitle {
+  color: #000000;
+  font-size: 85%;
+  /* heading.subtitle.font.size */
+  padding-top: 1px;
+  padding-bottom: 4px;
+  /* heading.bottom.padding */
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#tslkwuucqk .gt_bottom_border {
+  border-bottom-style: solid;
+  /* heading.border.bottom.style */
+  border-bottom-width: 2px;
+  /* heading.border.bottom.width */
+  border-bottom-color: #A8A8A8;
+  /* heading.border.bottom.color */
+}
+
+#tslkwuucqk .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#tslkwuucqk .gt_col_heading {
+  color: #000000;
+  background-color: #FFFFFF;
+  /* column_labels.background.color */
+  font-size: 16px;
+  /* column_labels.font.size */
+  font-weight: initial;
+  /* column_labels.font.weight */
+  vertical-align: middle;
+  padding: 10px;
+  margin: 10px;
+}
+
+#tslkwuucqk .gt_sep_right {
+  border-right: 5px solid #FFFFFF;
+}
+
+#tslkwuucqk .gt_group_heading {
+  padding: 8px;
+  color: #000000;
+  background-color: #FFFFFF;
+  /* stub_group.background.color */
+  font-size: 16px;
+  /* stub_group.font.size */
+  font-weight: initial;
+  /* stub_group.font.weight */
+  border-top-style: solid;
+  /* stub_group.border.top.style */
+  border-top-width: 2px;
+  /* stub_group.border.top.width */
+  border-top-color: #A8A8A8;
+  /* stub_group.border.top.color */
+  border-bottom-style: solid;
+  /* stub_group.border.bottom.style */
+  border-bottom-width: 2px;
+  /* stub_group.border.bottom.width */
+  border-bottom-color: #A8A8A8;
+  /* stub_group.border.bottom.color */
+  vertical-align: middle;
+}
+
+#tslkwuucqk .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #000000;
+  background-color: #FFFFFF;
+  /* stub_group.background.color */
+  font-size: 16px;
+  /* stub_group.font.size */
+  font-weight: initial;
+  /* stub_group.font.weight */
+  border-top-style: solid;
+  /* stub_group.border.top.style */
+  border-top-width: 2px;
+  /* stub_group.border.top.width */
+  border-top-color: #A8A8A8;
+  /* stub_group.border.top.color */
+  border-bottom-style: solid;
+  /* stub_group.border.bottom.style */
+  border-bottom-width: 2px;
+  /* stub_group.border.bottom.width */
+  border-bottom-color: #A8A8A8;
+  /* stub_group.border.bottom.color */
+  vertical-align: middle;
+}
+
+#tslkwuucqk .gt_striped {
+  background-color: #f2f2f2;
+}
+
+#tslkwuucqk .gt_row {
+  padding: 10px;
+  /* row.padding */
+  margin: 10px;
+  vertical-align: middle;
+}
+
+#tslkwuucqk .gt_stub {
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #A8A8A8;
+  padding-left: 12px;
+}
+
+#tslkwuucqk .gt_stub.gt_row {
+  background-color: #FFFFFF;
+}
+
+#tslkwuucqk .gt_summary_row {
+  background-color: #FFFFFF;
+  /* summary_row.background.color */
+  padding: 6px;
+  /* summary_row.padding */
+  text-transform: inherit;
+  /* summary_row.text_transform */
+}
+
+#tslkwuucqk .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+}
+
+#tslkwuucqk .gt_table_body {
+  border-top-style: solid;
+  /* field.border.top.style */
+  border-top-width: 2px;
+  /* field.border.top.width */
+  border-top-color: #A8A8A8;
+  /* field.border.top.color */
+  border-bottom-style: solid;
+  /* field.border.bottom.style */
+  border-bottom-width: 2px;
+  /* field.border.bottom.width */
+  border-bottom-color: #A8A8A8;
+  /* field.border.bottom.color */
+}
+
+#tslkwuucqk .gt_footnote {
+  font-size: 90%;
+  /* footnote.font.size */
+  padding: 4px;
+  /* footnote.padding */
+}
+
+#tslkwuucqk .gt_sourcenote {
+  font-size: 90%;
+  /* sourcenote.font.size */
+  padding: 4px;
+  /* sourcenote.padding */
+}
+
+#tslkwuucqk .gt_center {
+  text-align: center;
+}
+
+#tslkwuucqk .gt_left {
+  text-align: left;
+}
+
+#tslkwuucqk .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#tslkwuucqk .gt_font_normal {
+  font-weight: normal;
+}
+
+#tslkwuucqk .gt_font_bold {
+  font-weight: bold;
+}
+
+#tslkwuucqk .gt_font_italic {
+  font-style: italic;
+}
+
+#tslkwuucqk .gt_super {
+  font-size: 65%;
+}
+
+#tslkwuucqk .gt_footnote_glyph {
+  font-style: italic;
+  font-size: 65%;
+}
+</style>
+<div id="tslkwuucqk" style="overflow-x:auto;"><!--gt table start-->
+<table class='gt_table'>
+<thead>
+<tr>
+<th colspan='13' class='gt_heading gt_title gt_font_normal gt_center' >TTMC 2019 Schedule</th>
+</tr>
+<tr>
+<th colspan='13' class='gt_heading gt_subtitle gt_font_normal gt_center gt_bottom_border' ></th>
+</tr>
+</thead>
+<tr>
+<th class='gt_col_heading gt_left' rowspan='1' colspan='1'></th>
+<th class='gt_col_heading gt_left' rowspan='1' colspan='1'>Jan</th>
+<th class='gt_col_heading gt_left' rowspan='1' colspan='1'>Feb</th>
+<th class='gt_col_heading gt_left' rowspan='1' colspan='1'>Mar</th>
+<th class='gt_col_heading gt_left' rowspan='1' colspan='1'>Apr</th>
+<th class='gt_col_heading gt_left' rowspan='1' colspan='1'>May</th>
+<th class='gt_col_heading gt_left' rowspan='1' colspan='1'>Jun</th>
+<th class='gt_col_heading gt_left' rowspan='1' colspan='1'>Jul</th>
+<th class='gt_col_heading gt_left' rowspan='1' colspan='1'>Aug</th>
+<th class='gt_col_heading gt_left' rowspan='1' colspan='1'>Sep</th>
+<th class='gt_col_heading gt_left' rowspan='1' colspan='1'>Oct</th>
+<th class='gt_col_heading gt_left' rowspan='1' colspan='1'>Nov</th>
+<th class='gt_col_heading gt_left' rowspan='1' colspan='1'>Dec</th>
+</tr>
+<tbody class='gt_table_body'>
+<tr>
+<td class='gt_row gt_stub gt_left'>film year</td>
+<td class='gt_row gt_left'>1929</td>
+<td class='gt_row gt_left'>1939</td>
+<td class='gt_row gt_left'>1949</td>
+<td class='gt_row gt_left'>1959</td>
+<td class='gt_row gt_left'>1969</td>
+<td class='gt_row gt_left'>1979</td>
+<td class='gt_row gt_left'>1989</td>
+<td class='gt_row gt_left'>1999</td>
+<td class='gt_row gt_left'>2009</td>
+<td class='gt_row gt_left'>2019</td>
+<td class='gt_row gt_left'>???9</td>
+<td class='gt_row gt_left'>???9</td>
+</tr>
+</tbody>
+</table>
+<!--gt table end-->
+</div>
+</div>
+<h2 id="acknowledgments" class="appendix">Acknowledgments</h2>
+<p>This blog website was built with the <a href="https://rstudio.github.io/radix">radix</a> package from <a href="https://www.rstudio.com">RStudio</a>.</p>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
@@ -1288,7 +1616,12 @@
 <!--radix_placeholder_site_after_body-->
 <!--/radix_placeholder_site_after_body-->
 <!--radix_placeholder_appendices-->
-<div class="appendix-bottom"></div>
+<div class="appendix-bottom">
+<h3 id="updates-and-corrections">Corrections</h3>
+<p>If you see mistakes or want to suggest changes, please <a href="https://github.com/wcmbishop/time-travel-movie-club/issues/new">create an issue</a> on the source repository.</p>
+<h3 id="reuse">Reuse</h3>
+<p>Text and figures are licensed under Creative Commons Attribution <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Source code is available at <a href="https://github.com/wcmbishop/time-travel-movie-club">https://github.com/wcmbishop/time-travel-movie-club</a>, unless otherwise noted. The figures that have been reused from other sources don't fall under this license and can be recognized by a note in their caption: "Figure from ...".</p>
+</div>
 <!--/radix_placeholder_appendices-->
 <!--radix_placeholder_navigation_after_body-->
 <!--/radix_placeholder_navigation_after_body-->
