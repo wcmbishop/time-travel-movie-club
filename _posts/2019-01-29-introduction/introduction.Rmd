@@ -13,6 +13,9 @@ output:
 preview: images/camera-in-the-fog.jpg
 twitter:
   creator: "@wcmbishop"
+categories:
+  - "club-year:2019"
+  - "theme:road-trip"
 ---
 
 ```{r setup, include=FALSE}
@@ -87,7 +90,7 @@ To decide on a theme for the first year of **T.T.M.C.**®^[not actually trademar
 knitr::include_graphics("images/theme-voting-results.png")
 ```
 
-And the winner is.......**Roadtrip**! A journey through time and space. Sometimes with a clear destination, sometimes more of a dander^[dander: a wander with purpose.], but very often transformative to the participants. Think [O Brother, Where Art Thou?](https://www.imdb.com/title/tt0190590), [It Happened One Night](https://www.imdb.com/title/tt0025316), [Little Miss Sunshine](https://www.imdb.com/title/tt0449059), and [The Lord of the Rings](https://www.imdb.com/title/tt0120737).
+And the winner is.......**Road Trip**! A journey through time and space. Sometimes with a clear destination, sometimes more of a dander^[dander: a wander with purpose.], but very often transformative to the participants. Think [O Brother, Where Art Thou?](https://www.imdb.com/title/tt0190590), [It Happened One Night](https://www.imdb.com/title/tt0025316), [Little Miss Sunshine](https://www.imdb.com/title/tt0449059), and [The Lord of the Rings](https://www.imdb.com/title/tt0120737).
 Over the course of the year, we'll have to dig in and explore this theme in more detail, but I think we have some good films in store. 
 
 <aside>

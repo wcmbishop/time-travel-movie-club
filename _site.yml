@@ -6,11 +6,11 @@ output_dir: "docs"
 exclude: ["data/*.rds", "data-raw/*.R", "temp/*", "README"]
 base_url: https://wcmbishop.github.io/time-travel-movie-club
 repository_url: https://github.com/wcmbishop/time-travel-movie-club
-preview: https://wcmbishop.github.io/time-travel-movie-club/images/logo/black-camera-title.png
+preview: images/logo/black-camera-title.png
 favicon: images/favicon.ico
 navbar:
   logo:
-    image: images/logo/simple-blue.png
+    image: images/logo/simple-blue-white.png
   right:
     - text: "Home"
       href: index.html

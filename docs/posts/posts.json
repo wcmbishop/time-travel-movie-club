@@ -1,5 +1,24 @@
 [
   {
+    "path": "posts/2019-01-31-january-1929/",
+    "title": "January: 1929",
+    "description": "This is our first month of time-travel movies! For January, we'll be traveling to 1929 to pick the first film in our year-long theme \"Road Trip\".",
+    "author": [
+      {
+        "name": "Will Bishop",
+        "url": {}
+      }
+    ],
+    "date": "2019-01-31",
+    "categories": [
+      "club-year:2019",
+      "movie-year:1929",
+      "theme:road-trip"
+    ],
+    "preview": "posts/2019-01-31-january-1929/images/man-with-a-movie-camera.jpg",
+    "last_modified": "2019-01-31T22:08:55-08:00"
+  },
+  {
     "path": "posts/2019-01-29-introduction/",
     "title": "Introduction",
     "description": "Welcome! This post provides an introduction to the Time Travel Movie \nClub - what it is and where we'll be going. Ten decades of film, viewed \nat 12fpy.",
@@ -10,8 +29,11 @@
       }
     ],
     "date": "2019-01-29",
-    "categories": [],
+    "categories": [
+      "club-year:2019",
+      "theme:road-trip"
+    ],
     "preview": "posts/2019-01-29-introduction/images/camera-in-the-fog.jpg",
-    "last_modified": "2019-01-30T12:26:51-08:00"
+    "last_modified": "2019-01-31T22:09:10-08:00"
   }
 ]

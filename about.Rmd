@@ -14,7 +14,7 @@ library(tibble)
 library(tidyr)
 ```
 
-This a blog about movies. It chronicles the **Time Travel Movie Club**, which is an experiment to explore film across ten decades. For a given year, we pick a theme and travel back in time to take a look at films from exactly 10, 20, 30....to 90 years ago -- one film (and decade) per month. 
+This a blog about movies. It chronicles the **Time Travel Movie Club**, which is an experiment to explore film across ten decades. For a given year, we pick a theme and travel back in time to take a look at films from exactly 10, 20, 30....to 90 years ago -- one film (and decade) per month. You can read more in the [introductory post](posts/2019-01-29-introduction/).
 
 <aside>
 ```{r}
