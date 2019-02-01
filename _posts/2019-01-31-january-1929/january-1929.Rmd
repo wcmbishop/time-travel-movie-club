@@ -76,7 +76,7 @@ You can find the full 68min movie [online here](https://en.wikipedia.org/wiki/Fi
 
 ## Road Trip Games
 
-Road trips can be boring^[or, say, watching a 68min avant garde silent documentary film :)]. Wouldn't it be nice to have some games to play to help pass the time? Well you're in luck! Now you can play **Road Trip Movie Bingo**. Below is a sample card, and you can download 5 different cards [here](posts/january-1929/road-trip-bingo.zip) to play along at home while you watch this year's **T.T.M.C.** films.
+Road trips can be boring^[or, say, watching a 68min avant garde silent documentary film :)]. Wouldn't it be nice to have some games to play to help pass the time? Well you're in luck! Now you can play **Road Trip Movie Bingo**. Below is a sample card, and you can download 5 different cards [here](road-trip-bingo.zip) to play along at home while you watch this year's **T.T.M.C.** films.
 
 ```{r}
 knitr::include_graphics("images/road-trip-bingo.png")
