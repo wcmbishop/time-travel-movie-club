@@ -40,15 +40,18 @@ For our 1929 time-capsule selection, we are watching...
 
 [**Man With a Movie Camera**](https://www.imdb.com/title/tt0019760/),
 By Dziga Vertov, Edited by Elizaveta Svilova. <br><br>
-This avant garde Soviet film is considered one of the most influential and groundbreaking films in cinema history. It is famous for the virtuosic cinematic techniques invented or deployed in the film, such as: multiple exposure, fast motion, slow motion, freeze frames, match cuts, jump cuts, split screens, Dutch angles^[[a.k.a.](https://en.wikipedia.org/wiki/Dutch_angle) Dutch tilt, canted angle, or oblique angle....in other words, rotating the camera - and spoiler, "Dutch" actually refers to German!], extreme close-ups^[further explored by [Wayne's World](https://www.youtube.com/watch?v=BYu_N2Fb2Vc)], tracking shots, reversed footage, and stop motion animation.
+This avant garde Soviet film is considered one of the most influential and groundbreaking films in cinema history. It is famous for the virtuosic cinematic techniques invented or deployed in the film, such as: multiple exposure, fast motion, slow motion, freeze frames, match cuts, jump cuts, split screens, Dutch angles^[[a.k.a.](https://en.wikipedia.org/wiki/Dutch_angle) Dutch tilt, canted angle, or oblique angle....in other words, rotating the camera - and spoiler, "Dutch" actually refers to German!], extreme close-ups^[further explored by [Wayne's World](https://www.youtube.com/watch?v=BYu_N2Fb2Vc)], tracking shots, reversed footage, and stop motion animation. [This article](https://www.bfi.org.uk/news-opinion/news-bfi/features/five-wonderful-effects-man-movie-camera) touches on a few of these techniques and shows some sample clips. <br> <br> 
+It is ambitiously avant garde.  This film is perhaps more remarkable for the degree it is NOT like other movies from 1929 - or indeed, of any year - than that it is representative of that year.
 
 <aside>
-```{r}
+```{r, fig.cap="From [IMDB](https://www.imdb.com/title/tt0019760)"}
 knitr::include_graphics("images/man-with-a-movie-camera.jpg")
 ```
 </aside>
 
-It is ambitiously avant garde.  This film is perhaps more remarkable for the degree it is NOT like other movies from 1929 - or indeed, of any year - than that it is representative of that year.
+```{r, fig.cap="From IMDB: https://www.imdb.com/title/tt0019760"}
+knitr::include_graphics("images/giant-camera-man.jpg")
+```
 
 As Vertov proclaimed:
 
@@ -73,6 +76,12 @@ Sometimes, a road trip is an excuse (or a mission) to get from point A to point 
 #### Watching
 
 You can find the full 68min movie [online here](https://en.wikipedia.org/wiki/File:Man_With_A_Movie_Camera_(Dziga_Vertov,_1929).webm). This is a silent film, but these were typically screened with musical accompaniment from an organ or orchestra. We strongly recommend following suit on this and adding music while you watch. One wonderful musical pairing is Shostakovich's Symphony No. 3, which was composed in 1929. 
+
+<aside>
+```{r, fig.cap="From [IMDB](https://www.imdb.com/title/tt0019760)"}
+knitr::include_graphics("images/eye-zoom.jpg")
+```
+</aside>
 
 ## Road Trip Games
 
