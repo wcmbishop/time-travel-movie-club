@@ -3,7 +3,7 @@ title: "Introduction"
 description: |
   Welcome! This post provides an introduction to the Time Travel Movie 
   Club - what it is and where we'll be going. Ten decades of film, viewed 
-  at 12fpy.
+  at 12fpy ("films per year"). It also announces our theme of the year for 2019.
 author:
   - name: Will Bishop
 date: 2019-01-29

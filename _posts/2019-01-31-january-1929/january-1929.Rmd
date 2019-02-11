@@ -1,14 +1,17 @@
 ---
 title: "January: 1929"
 description: |
-  This is our first month of time-travel movies! For January, we'll be traveling to 1929 to pick the first film in our year-long theme "Road Trip".
+  This is our first month of time-travel movies! For January, we'll be traveling 
+  to 1929 to pick the first film in our year-long theme "Road Trip". We'll be 
+  looking at an experimental Soviet film that questions what cinema should be
+  and helps us question our theme. 
 author:
   - name: Will Bishop
 date: 2019-01-31
 output:
   radix::radix_article:
     self_contained: false
-preview: images/man-with-a-movie-camera.jpg
+preview: images/giant-camera-man.jpg
 twitter:
   creator: "@wcmbishop"
 categories:
@@ -49,7 +52,7 @@ knitr::include_graphics("images/man-with-a-movie-camera.jpg")
 ```
 </aside>
 
-```{r, fig.cap="From IMDB: https://www.imdb.com/title/tt0019760"}
+```{r, fig.cap="From [IMDB](https://www.imdb.com/title/tt0019760)"}
 knitr::include_graphics("images/giant-camera-man.jpg")
 ```
 
