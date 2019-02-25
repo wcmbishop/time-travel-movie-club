@@ -10,7 +10,7 @@ preview: images/logo/black-camera-title.png
 favicon: images/favicon.ico
 navbar:
   logo:
-    image: images/logo/simple-blue-white.png
+    image: images/logo/black-camera.png
   right:
     - text: "Home"
       href: index.html

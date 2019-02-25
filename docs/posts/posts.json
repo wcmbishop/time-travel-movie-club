@@ -1,5 +1,23 @@
 [
   {
+    "path": "posts/2019-02-22-february-1939/",
+    "title": "February: 1939",
+    "description": "This month we travel to perhaps the greatest year of cinema, 1939 -- we're \nnot in Kansas anymore, we're in the Golden Age of Hollywood! And we're off \nto see a wizard on a yellow brick road-trip.",
+    "author": [
+      {
+        "name": "Will Bishop",
+        "url": {}
+      }
+    ],
+    "date": "2019-02-24",
+    "categories": [
+      "year:2019",
+      "theme:road-trip"
+    ],
+    "preview": "posts/2019-02-22-february-1939/images/emerald-city.jpg",
+    "last_modified": "2019-02-24T17:21:43-08:00"
+  },
+  {
     "path": "posts/2019-01-31-january-1929/",
     "title": "January: 1929",
     "description": "This is our first month of time-travel movies! For January, we'll be traveling \nto 1929 to pick the first film in our year-long theme \"Road Trip\". We'll be \nlooking at an experimental Soviet film that questions what cinema should be\nand helps us question our theme.",
@@ -11,12 +29,11 @@
     ],
     "date": "2019-01-31",
     "categories": [
-      "club-year:2019",
-      "movie-year:1929",
+      "year:2019",
       "theme:road-trip"
     ],
     "preview": "posts/2019-01-31-january-1929/images/giant-camera-man.jpg",
-    "last_modified": "2019-02-11T15:48:26-08:00"
+    "last_modified": "2019-02-24T16:17:15-08:00"
   },
   {
     "path": "posts/2019-01-29-introduction/",
@@ -30,10 +47,10 @@
     ],
     "date": "2019-01-29",
     "categories": [
-      "club-year:2019",
+      "year:2019",
       "theme:road-trip"
     ],
     "preview": "posts/2019-01-29-introduction/images/camera-in-the-fog.jpg",
-    "last_modified": "2019-02-11T15:45:34-08:00"
+    "last_modified": "2019-02-24T16:14:48-08:00"
   }
 ]
