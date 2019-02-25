@@ -1,0 +1,6 @@
+*.Rmd		text
+*.R  		text
+
+# files to ignore
+*.xml linguist-vendored
+*.js linguist-vendored

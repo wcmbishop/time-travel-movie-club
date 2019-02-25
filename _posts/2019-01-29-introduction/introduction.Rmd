@@ -3,18 +3,20 @@ title: "Introduction"
 description: |
   Welcome! This post provides an introduction to the Time Travel Movie 
   Club - what it is and where we'll be going. Ten decades of film, viewed 
-  at 12fpy.
+  at 12fpy ("films per year"). It also announces our theme of the year for 2019.
 author:
   - name: Will Bishop
 date: 2019-01-29
 output:
   radix::radix_article:
+    toc: true
+    toc_depth: 3
     self_contained: false
 preview: images/camera-in-the-fog.jpg
 twitter:
   creator: "@wcmbishop"
 categories:
-  - "club-year:2019"
+  - "year:2019"
   - "theme:road-trip"
 ---
 
@@ -28,7 +30,7 @@ library(tibble)
 library(tidyr)
 ```
 
-## The Concept
+# The Concept
 
 For a long time, I've thought a great idea for a movie club would be to watch movies from decades past. You could travel back in time and watch films from exactly 20 years ago for example. Or 30 years, or 40 years. You would get this small slice of film history to browse through, a 12-month time-capsule defined in relation to the present. And each new year you could browse the next slice of history.
 
@@ -80,7 +82,7 @@ data %>%
 ```
 
 
-## Theme of the Year
+# Theme of the Year
 
 But obviously we need *more* Arbitrary Constraints®! There are too many wonderful films to choose from, even in our year long time-capsules^[for example, [1939](https://www.imdb.com/search/title?year=1939&title_type=feature&) is considered by some to be the single greatest year of cinema!]. So let's pick a theme to adhere to -- i.e. some (loose) guiding star to steer by as we float down the decades. 
 
@@ -104,7 +106,7 @@ knitr::include_graphics("images/road-trip-road.jpg")
 ```
 
 
-## To Be Continued...
+# To Be Continued...
 
 So stay tuned and join us on this journey through 10 decades of film! We'll be viewing at 12 films-per-year, 24 frames-per-second. I'll be posting January's 1929 selection shortly!
 
