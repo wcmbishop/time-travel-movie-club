@@ -26,7 +26,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 # The Greatest Year
 
-In our second time-capsule movie month, we are traveling to [1939](https://www.imdb.com/search/title?year=1939&title_type=feature). Some see this year, at the height of the Golden Age of Hollywood cinema, as the single greatest in film history^["The year 1939 in film is widely considered the most outstanding one ever" - Wikipedia, [1939 in film](https://en.wikipedia.org/wiki/1939_in_film)]. As one piece of evidence for this, the American Film Institute's (AFI) original [Top 100 movie list](https://www.afi.com/100Years/movies.aspx) boasted five films from 1939^[AFI's [100 Years...100 Movies](https://www.afi.com/100Years/movies.aspx) list had 5 films from 1939: Gone With The Wind (#4), The Wizard Of Oz (#6), Mr. Smith Goes To Washington (#29), Stagecoach (#63), and Wuthering Heights (#73)], the most of any year, and the only year to have two pictures in the top ten.
+In our second time-capsule movie month, we are traveling to [1939](https://www.imdb.com/search/title?year=1939&title_type=feature). Some see this year, at the height of the Golden Age of Hollywood cinema, as the single greatest in film history^["The year 1939 in film is widely considered the most outstanding one ever" - Wikipedia, [1939 in film](https://en.wikipedia.org/wiki/1939_in_film)]. As one piece of evidence for this, the American Film Institute's (AFI) original [Top 100 movie list](https://www.afi.com/100Years/movies.aspx) boasted five films from 1939^[AFI's [100 Years...100 Movies](https://www.afi.com/100Years/movies.aspx) list had 5 films from 1939: Gone With The Wind (#4), The Wizard Of Oz (#6), Mr. Smith Goes To Washington (#29), Stagecoach (#63), and Wuthering Heights (#73)], the most of any year and the only year to have two pictures in the top ten.
 
 ```{r map-types, fig.width=7, fig.height=2, echo=FALSE, eval=FALSE, layout="l-body-outset"}
 library(ggplot2)
@@ -114,7 +114,7 @@ knitr::include_graphics("images/horse-of-a-different-color.jpg")
 ```
 </aside>
 
-And I particularly enjoyed this collection of non-sequitur trivia quirks from that article:
+I particularly enjoyed this collection of non-sequitur trivia quirks from that article:
 
 > A quarter-mile cable tunnel under the studio was used to record the echo of “The Wizard's” voice. The wings of a giant condor were borrowed from a museum for the production, and a mathemetician of renown, O. O. Ceccarini, was hired to devise an appropriate noise to represent the center of the cyclone.
 
@@ -163,7 +163,7 @@ knitr::include_graphics("images/group-traveling.jpg")
 </aside>
 
 
-And from our journey watching this month's selection, we didn't gain any Great and Powerful abilities of the head or heart or courage, but we did find some gifts for the stomach. I'll leave you with this beautiful image of our home-made movie snacks - a yellow [lemon-bar](https://www.allrecipes.com/recipe/10294/the-best-lemon-bars/) brick road and ruby jello slippers. Happy time-traveling, everybody.
+And from our journey watching this month's selection, we didn't gain any Great and Powerful abilities of the head or heart or courage, but we did find some gifts for the stomach. I'll leave you with this beautiful shot of our home-made movie snacks - a yellow [lemon-bar](https://www.allrecipes.com/recipe/10294/the-best-lemon-bars/) brick road and ruby jello slippers. Happy time-traveling, everybody.
 
 ```{r}
 knitr::include_graphics("images/oz-dessert.jpg")

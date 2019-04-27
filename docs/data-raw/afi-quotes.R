@@ -28,8 +28,9 @@ afi_quotes %>%
   arrange(desc(n))
 
 # Oz quotes
-afi_quotes %>% 
+2 %>% 
   filter(movie == "THE WIZARD OF OZ")
 
 # save to ./data
 saveRDS(afi_quotes, file = file.path("data", "afi_quotes.rds"))
+# afi_quotes <- readRDS(file.path("data", "afi_quotes.rds"))

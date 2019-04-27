@@ -1,0 +1,127 @@
+---
+title: "March: 1949"
+description: |
+  John Ford and John Wayne are back with a road-trip selection from their Calvalry Trilogy.
+author:
+  - name: Will Bishop
+date: 2019-03-31
+output:
+  radix::radix_article:
+    toc: true
+    toc_depth: 3
+    self_contained: false
+preview: images/brittles-longjohns.png
+twitter:
+  creator: "@wcmbishop"
+categories:
+  - "year:2019"
+  - "theme:road-trip"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# The Times
+
+```{r factoids}
+library(gt)
+tibble::tribble(
+  ~event, ~value,
+  "US President:", "Harry S. Truman",
+  "Best Picture:", "All the King's Men",
+  "Avg. Ticket Price:", "$0.46"
+) %>% 
+  gt() %>%
+  tab_header(title = "1949 Factoids") %>% 
+  tab_options(
+    table.width = pct(100),
+    column_labels.hidden = TRUE
+    ) %>% 
+  tab_footnote(
+    footnote = md("Source: [oscars.org](https://www.oscars.org/oscars/ceremonies/1950)"),
+    locations = cells_data(
+      columns = vars(value),
+      rows = 2)
+  ) %>% 
+  tab_footnote(
+    footnote = md("Source: [boxofficemojo.com](https://www.boxofficemojo.com/about/adjuster.htm)"),
+    locations = cells_data(
+      columns = vars(value),
+      rows = 3)
+  )
+```
+
+For March, we head to [1949](https://www.imdb.com/search/title?year=1949&title_type=feature). Since our last time-capsule year, a World War has come and gone, and Harry Truman has started his second term as President. Some of the top grossing films of the year were war dramas, like [*Sands of Iwo Jima*](https://www.imdb.com/title/tt0041841) and [*Battleground*](https://www.imdb.com/title/tt0041163), along with the relgious epic [*Samson and Delilah*](https://www.imdb.com/title/tt0041838)^["HISTORY'S MOST BEAUTIFUL AND TREACHEROUS WOMAN!" - tagline from [*Samson and Delilah*](https://www.imdb.com/title/tt0041838)]. The Best Picture winner at the Oscar's was the political drama [*All The King's Men*](https://www.imdb.com/title/tt0041113), but arguably the most enduring classic from 1949 was [*The Third Man*](https://www.imdb.com/title/tt0041959), the film-noir starring a young Orson Welles, which [took home the Grand Prix](https://en.wikipedia.org/wiki/1949_Cannes_Film_Festival) at the Cannes Film Festival that year.
+
+```{r factoid-images, fig.width=7, fig.height=2, echo=FALSE, eval=FALSE, layout="page"}
+library(ggplot2)
+library(patchwork)
+library(jpeg)
+
+sands <- readJPEG(file.path("images", "sands-of-iwo-jima.jpg"))
+battleground <- readJPEG(file.path("images", "battleground.jpg"))
+samson <- readJPEG(file.path("images", "samson-and-delilah.jpg"))
+all_kings_men <- readJPEG(file.path("images", "all-the-kings-men.jpg"))
+third_man <- readJPEG(file.path("images", "the-third-man.jpg"))
+# build plots
+theme_size <- 6
+gg_sands <- ggplot() + theme_minimal(theme_size) +
+  annotation_custom(grid::rasterGrob(sands, interpolate = TRUE),
+                    xmin = -Inf, xmax = Inf, ymin = -Inf, ymax = Inf)
+gg_battleground <- ggplot() + theme_minimal(theme_size) +
+  annotation_custom(grid::rasterGrob(battleground, interpolate = TRUE),
+                    xmin = -Inf, xmax = Inf, ymin = -Inf, ymax = Inf)
+gg_samson <- ggplot() + theme_minimal(theme_size) +
+  annotation_custom(grid::rasterGrob(samson, interpolate = TRUE),
+                    xmin = -Inf, xmax = Inf, ymin = -Inf, ymax = Inf)
+gg_all_kings_men <- ggplot() + theme_minimal(theme_size) +
+  annotation_custom(grid::rasterGrob(all_kings_men, interpolate = TRUE),
+                    xmin = -Inf, xmax = Inf, ymin = -Inf, ymax = Inf)
+gg_third_man <- ggplot() + theme_minimal(theme_size) +
+  annotation_custom(grid::rasterGrob(third_man, interpolate = TRUE),
+                    xmin = -Inf, xmax = Inf, ymin = -Inf, ymax = Inf)
+# patchwork
+gg_sands + gg_battleground + gg_samson + gg_all_kings_men + gg_third_man + 
+  plot_layout(nrow = 1)
+ggsave("images/movie-posters.png", height = 2, width = 7)
+```
+
+```{r factoid-images-show, echo=FALSE, layout="l-body-outset", fig.cap="Source images from [IMDB](https://www.imdb.com)"}
+knitr::include_graphics("images/movie-posters.png")
+```
+
+
+
+
+# The 1949 Selection
+
+For our 1949 time-capsule selection, we are watching...<br><br>
+[**She Wore A Yellow Ribbon**](https://www.imdb.com/title/tt0041866),
+Directed by John Ford, Starring John Wayne.<br><br>
+John Ford and John Wayne got an honorable road-trip mention in our [last post](posts/2019-02-22-february-1939/) for their trail-blazing 1939 western *Stagecoach*, and ten years later they are back to take our main pick! It's a war epic, which seems to be a theme of the year -- but this one is a throwback calvary drama instead of a modern war flick. Wayne, as Captain Nathan Brittles, is now the sage old war commander of the group (as opposed the charismatic young bandit in *Stagecoach*), who's steely squint and graying hair is caught in beautiful technicolor. Shot on-site in Monument Valley (Arizone/Utah) by cinematographer Winton Hoch, it won [Best Color Cinematography](https://www.oscars.org/oscars/ceremonies/1950) in 1950.
+
+<aside>
+```{r, fig.cap="From [IMDB](https://www.imdb.com/title/tt0041866/)"}
+knitr::include_graphics("images/she-wore.jpg")
+```
+</aside>
+
+```{r, fig.cap="From [oldmoviesaregreat.wordpress.com](https://oldmoviesaregreat.wordpress.com/2016/10/16/she-wore-a-yellow-ribbon-1949/)", out.width="100%"}
+knitr::include_graphics("images/brittles-writing.png")
+```
+
+### Calvalry Trilogy 
+
+This film was the second of John Ford's so-called "Calvalry Trilogy", the other two being [*Fort Apache*](https://www.imdb.com/title/tt0040369/) and [*Rio Grande*](https://www.imdb.com/title/tt0042895/) -- *all* starred John Wayne (as different characters) and were released back-to-back from 1948 to 1950. Apparently John Ford was unsure who to cast for the role of the retiring Captain Brittles. He was dubious that Wayne could portray a character 20 years his senior, but the actor's performance the previous year in *Red River* had director Ford remark, "I didn't know the big son of a bitch could act!"^[Quote from [tcm.com](http://www.tcm.com/this-month/article/12472%7C0/Red-River.html)] John Wayne took the role and was quite proud of his performance, thinking it should have been the one to earn him his Best Actor nomination instead of *Sands of Iwo Jima* that same year^[from [Wikipedia](https://en.wikipedia.org/wiki/She_Wore_a_Yellow_Ribbon)].
+
+
+```{r, fig.cap="From [oldmoviesaregreat.wordpress.com](https://oldmoviesaregreat.wordpress.com/2016/10/16/she-wore-a-yellow-ribbon-1949/)", out.width="100%"}
+knitr::include_graphics("images/she-wore-trail.jpg")
+```
+
+### Ride On
+
+This road-trip selection takes place in large part on the dusty trail. Our retiring hero is a *fine* man who's had a *fine* career, and now he's headed out for what is meant to be his last mission, a standard patrol escort with a surprise female guest (bearer of said yellow ribbon). Of course, trouble ensues. Over the years, Captain Brittles has lost his family, along with good friends and good soldiers, and now he's being forced to give up the job he loves as well and trade in his spurs for a suit. This is a tough and honorable man who reminds his men to "never apologize...it's a sign of weakness". And rules be damned, he can't go out with a mission unaccomplished. Brittles re-connects with his calling one last time out on the trail, "attempting to find in motion what was lost in space" as Tennessee Williams put it^[Tennssee Williams - ["The Glass Menagerie" quotes](https://www.sparknotes.com/lit/menagerie/quotes/page/5/)]. And in the end, he's rewarded for his efforts. He gets to keep his boots and leave the homesteading for the civilians. *#road-trip-lifestyle*
+
+
