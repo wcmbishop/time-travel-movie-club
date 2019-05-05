@@ -52,7 +52,7 @@ tibble::tribble(
   )
 ```
 
-For March, we head to [1949](https://www.imdb.com/search/title?year=1949&title_type=feature). Since our last time-capsule year, a World War has come and gone, and Harry Truman has started his second term as President. Some of the top grossing films of the year were war dramas, like [*Sands of Iwo Jima*](https://www.imdb.com/title/tt0041841) and [*Battleground*](https://www.imdb.com/title/tt0041163), along with the relgious epic [*Samson and Delilah*](https://www.imdb.com/title/tt0041838)^["HISTORY'S MOST BEAUTIFUL AND TREACHEROUS WOMAN!" - tagline from [*Samson and Delilah*](https://www.imdb.com/title/tt0041838)]. The Best Picture winner at the Oscar's was the political drama [*All The King's Men*](https://www.imdb.com/title/tt0041113), but arguably the most enduring classic from 1949 was [*The Third Man*](https://www.imdb.com/title/tt0041959), the film-noir starring a young Orson Welles, which [took home the Grand Prix](https://en.wikipedia.org/wiki/1949_Cannes_Film_Festival) at the Cannes Film Festival that year.
+For March, we head to [1949](https://www.imdb.com/search/title?year=1949&title_type=feature). Since our last time-capsule year, a World War has come and gone, and Harry Truman has been sworn in to his second term as President. Some of the top grossing films of the year were war dramas, like [*Sands of Iwo Jima*](https://www.imdb.com/title/tt0041841) and [*Battleground*](https://www.imdb.com/title/tt0041163). while the biggest money maker was the relgious epic [*Samson and Delilah*](https://www.imdb.com/title/tt0041838)^["HISTORY'S MOST BEAUTIFUL AND TREACHEROUS WOMAN!" - tagline from [*Samson and Delilah*](https://www.imdb.com/title/tt0041838)]. The Best Picture winner at the Oscar's for 1949 was the political drama [*All The King's Men*](https://www.imdb.com/title/tt0041113), but arguably the most enduring classic from 1949 was [*The Third Man*](https://www.imdb.com/title/tt0041959), the film-noir starring a young Orson Welles, which [took home the Grand Prix](https://en.wikipedia.org/wiki/1949_Cannes_Film_Festival) at the Cannes Film Festival that year.
 
 ```{r factoid-images, fig.width=7, fig.height=2, echo=FALSE, eval=FALSE, layout="page"}
 library(ggplot2)
@@ -92,14 +92,12 @@ knitr::include_graphics("images/movie-posters.png")
 ```
 
 
-
-
 # The 1949 Selection
 
 For our 1949 time-capsule selection, we are watching...<br><br>
 [**She Wore A Yellow Ribbon**](https://www.imdb.com/title/tt0041866),
 Directed by John Ford, Starring John Wayne.<br><br>
-John Ford and John Wayne got an honorable road-trip mention in our [last post](posts/2019-02-22-february-1939/) for their trail-blazing 1939 western *Stagecoach*, and ten years later they are back to take our main pick! It's a war epic, which seems to be a theme of the year -- but this one is a throwback calvary drama instead of a modern war flick. Wayne, as Captain Nathan Brittles, is now the sage old war commander of the group (as opposed the charismatic young bandit in *Stagecoach*), who's steely squint and graying hair is caught in beautiful technicolor. Shot on-site in Monument Valley (Arizone/Utah) by cinematographer Winton Hoch, it won [Best Color Cinematography](https://www.oscars.org/oscars/ceremonies/1950) in 1950.
+John Ford and John Wayne got an honorable road-trip mention in our [last post](https://wcmbishop.github.io/time-travel-movie-club/posts/2019-02-22-february-1939/) for their trail-blazing 1939 western *Stagecoach*. Ten years later they are back to take our main pick! It's a war epic, which seems to be a theme of the year -- but this one is a throwback calvary drama instead of a modern war flick. Wayne, as Captain Nathan Brittles, is now the sage old war commander of the group (as opposed the charismatic young Ringo Kid in *Stagecoach*), who's steely squint and graying hair is caught in beautiful technicolor. Shot on-site in Monument Valley (Arizone/Utah) by cinematographer Winton Hoch, the film won [Best Color Cinematography](https://www.oscars.org/oscars/ceremonies/1950) in 1950.
 
 <aside>
 ```{r, fig.cap="From [IMDB](https://www.imdb.com/title/tt0041866/)"}
@@ -122,6 +120,6 @@ knitr::include_graphics("images/she-wore-trail.jpg")
 
 ### Ride On
 
-This road-trip selection takes place in large part on the dusty trail. Our retiring hero is a *fine* man who's had a *fine* career, and now he's headed out for what is meant to be his last mission, a standard patrol escort with a surprise female guest (bearer of said yellow ribbon). Of course, trouble ensues. Over the years, Captain Brittles has lost his family, along with good friends and good soldiers, and now he's being forced to give up the job he loves as well and trade in his spurs for a suit. This is a tough and honorable man who reminds his men to "never apologize...it's a sign of weakness". And rules be damned, he can't go out with a mission unaccomplished. Brittles re-connects with his calling one last time out on the trail, "attempting to find in motion what was lost in space" as Tennessee Williams put it^[Tennssee Williams - ["The Glass Menagerie" quotes](https://www.sparknotes.com/lit/menagerie/quotes/page/5/)]. And in the end, he's rewarded for his efforts. He gets to keep his boots and leave the homesteading for the civilians. *#road-trip-lifestyle*
+This road-trip selection takes place in large part on the dusty trail. Our retiring hero is a fine man who's had a fine career, and now he's headed out for what is meant to be his last mission: a standard patrol escort with a surprise female guest (bearer of said yellow ribbon). Of course, trouble ensues. Over the years, Captain Brittles has lost his family, along with good friends and good soldiers, and now he's being forced to give up the job he loves and trade in his soldier's spurs for a gentleman's suit. Brittles is a tough and honorable man who reminds his men to "never apologize"^["never apologize...it's a sign of weakness"]. And rules be damned, he can't go out with a mission unfinished. Brittles re-connects with his calvalry calling one last time out on the trail, "attempting to find in motion what was lost in space" as Tennessee Williams put it^[Tennssee Williams - ["The Glass Menagerie" quotes](https://www.sparknotes.com/lit/menagerie/quotes/page/5/)]. And in the end, he's rewarded for his efforts. He gets to keep his boots and leave the homesteading for the civilians. *#roadtriplifestyle*
 
 
