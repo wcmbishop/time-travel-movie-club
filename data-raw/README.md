@@ -8,7 +8,19 @@ Annual movie stats - world-wide box-office gross, movie count, and top grossing 
 
 `box-office-mojo.csv`
 source: https://www.kaggle.com/eliasdabbas/boxofficemojo-alltime-domestic-data#boxoffice_march_2019.csv
-Data scraped from BoxofficeMojo's listing of the lifetime gross, ranking and production year of hollywood movies. All is based on domestic gross (does NOT account for inflation).
+Data scraped from BoxofficeMojo's listing of the lifetime gross, ranking, and production year of hollywood movies. All is based on domestic gross (does NOT account for inflation).
+
+
+
+`top-domestic-gross-ticket-adjusted.tsv`
+source: https://www.boxofficemojo.com/alltime/adjusted.htm
+Top grossing movies, adjusted for ticket price inflation. For notes on how prices are adjusted, see details [here](https://www.boxofficemojo.com/about/adjuster.htm). 
+NOTE: ^ Indicates documented multiple theatrical releases. Most of the pre-1980 movies listed on this chart had multiple undocumentented releases over the years. The year shown is the first year of release.
+
+
+`year-ticket-price.tsv`
+source: https://www.boxofficemojo.com/about/adjuster.htm
+Average movie ticket price by year, adjusted for inflation.
 
 
 `cpi.tsv`
