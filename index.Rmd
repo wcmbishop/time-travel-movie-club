@@ -2,6 +2,6 @@
 title: "Time Travel Movie Club"
 description: |
   Ten Decades of Film, broadcast at 12fpy
-site: radix::radix_website
+site: distill::distill_website
 listing: posts
 ---
