@@ -24,23 +24,29 @@ knitr::include_graphics("images/logo/black-camera-title.png")
 
 <br>
 
-```{r layout="l-page", fig.height=1.5, fig.width=7}
-years <- seq(1929, 2019, by = 10)
-data <- tibble(
-  month = month.abb,
-  film_year = c(years, "????", "????")
+```{r schedule, layout="l-page", fig.height=1.5, fig.width=7}
+data <- bind_rows(
+  tibble(month = month.abb,
+         film_year = c(seq(1929, 2019, by = 10), "????", "????"),
+         year = 2019),
+  tibble(month = month.abb,
+         film_year = c(seq(1930, 2020, by = 10), "????", "????"),
+         year = 2020)
 )
 
 data %>% 
   spread(key = month, value = film_year) %>% 
-  select(!!month.abb) %>% 
-  mutate(rowname = "film year") %>% 
-  gt(rowname_col = "rowname") %>%
+  select(year, !!month.abb) %>% 
+  gt(rowname_col = "year") %>%
   tab_header(
-    title = "TTMC 2019 Schedule"
-  )
+    title = "TTMC Schedule"
+  ) %>% 
+  tab_spanner(
+    label = "Film Year",
+    columns = vars(month.abb)
+  ) %>% 
+  tab_stubhead(label = "Club Year")
 ```
-
 
 ## Acknowledgments {.appendix}
 
