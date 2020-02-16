@@ -42,10 +42,10 @@ factoid_table(
 
 For `r params$month`, we head to [`r params$year`](`r params$imdb_year_url`). MORE TEXT.
 
-```{r posters-build, eval=FALSE}
+```{r posters-build, eval=FALSE, fig.height=2, fig.width=7}
 img_files <- list.files("images/posters", pattern = ".jpg", full.names = TRUE)
 plot_posters(img_files)
-ggplot2::ggsave("images/movie-posters.png", height = 2, width = 8)
+ggplot2::ggsave("images/movie-posters.png", height = 2, width = 7)
 ```
 
 ```{r posters-show, layout="l-body-outset", fig.cap="Source images from [IMDB](https://www.imdb.com)"}
