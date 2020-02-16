@@ -6,7 +6,7 @@ author:
   - name: Will Bishop
 date: 2019-03-31
 output:
-  radix::radix_article:
+  distill::distill_article:
     toc: true
     toc_depth: 3
     self_contained: false

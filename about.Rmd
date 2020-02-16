@@ -44,5 +44,5 @@ data %>%
 
 ## Acknowledgments {.appendix}
 
-This blog website was built with the [radix](https://rstudio.github.io/radix) package from [RStudio](https://www.rstudio.com).
+This blog website was built with the [distill](https://rstudio.github.io/distill) package from [RStudio](https://www.rstudio.com).
 

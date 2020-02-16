@@ -1,0 +1,80 @@
+---
+title: "MONTH: YEAR"
+description: |
+  Some description
+author:
+  - name: Will Bishop
+date: ????-??-??
+output:
+  distill::distill_article:
+    toc: true
+    toc_depth: 3
+    self_contained: false
+preview: images/pic.png
+twitter:
+  creator: "@wcmbishop"
+categories:
+  - "year:2019"
+  - "theme:road-trip"
+params:
+  year: YEAR
+  month: April
+  movie: "TITLE"
+  imdb_movie_url: https://www.imdb.com/title/tt0052618/
+  imdb_year_url: https://www.imdb.com/search/title/?year=1959&title_type=feature
+  oscars_url: https://www.oscars.org/oscars/ceremonies/1960
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(ttmc)
+```
+
+# The Times
+
+```{r factoids}
+factoid_table(
+  year = params$year, 
+  us_pres = "US-PRES",
+  best_pic = "TITLE",
+  ticket_price = 0.51)
+```
+
+For `r params$month`, we head to [`r params$year`](`r params$imdb_year_url`). MORE TEXT.
+
+```{r posters-build, eval=FALSE}
+img_files <- list.files("images/posters", pattern = ".jpg", full.names = TRUE)
+plot_posters(img_files)
+ggplot2::ggsave("images/movie-posters.png", height = 2, width = 8)
+```
+
+```{r posters-show, layout="l-body-outset", fig.cap="Source images from [IMDB](https://www.imdb.com)"}
+knitr::include_graphics("images/movie-posters.png")
+```
+
+
+# The `r params$year` Selection
+
+For our `r params$year` time-capsule selection, we are watching...<br><br>
+[**`r params$movie`**](`r params$imdb_movie_url`),
+Directed by DIRECTOR, Starring STAR.<br><br>
+SUMMARY DESCRIPTION
+
+<aside>
+```{r, fig.cap=glue::glue("From [IMDB]({url})", url = params$imdb_movie_url)}
+knitr::include_graphics("images/ben-hur.jpg")
+```
+</aside>
+
+```{r, fig.cap=glue::glue("From [IMDB]({url})", url = params$imdb_movie_url), out.width="100%"}
+knitr::include_graphics("images/big-pic.png")
+```
+
+### Section
+
+More description
+
+```{r, fig.cap=glue::glue("From [IMDB]({url})", url = params$imdb_movie_url), out.width="100%"}
+knitr::include_graphics("images/another-pic.jpg")
+```
+
