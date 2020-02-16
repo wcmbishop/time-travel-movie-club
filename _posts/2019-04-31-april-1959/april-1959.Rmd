@@ -1,0 +1,104 @@
+---
+title: "April: 1959"
+description: |
+  The fall and rise of Judah Ben-Hur, MGM, and an uncredited messiah.
+author:
+  - name: Will Bishop
+date: 2019-04-30
+output:
+  distill::distill_article:
+    toc: true
+    toc_depth: 3
+    self_contained: false
+preview: images/clips/MV5BNjQ4NDJjZTQtODZiOS00NjJkLWFmZGEtZmExMGEyMmRkMDcyXkEyXkFqcGdeQXVyMjMzMDI4MjQ@._V1_SX1777_CR0,0,1777,644_AL_.jpg
+twitter:
+  creator: "@wcmbishop"
+categories:
+  - "year:2019"
+  - "theme:road-trip"
+params:
+  year: 1959
+  movie: "BEN-HUR"
+  imdb_movie_url: https://www.imdb.com/title/tt0052618/
+  imdb_year_url: https://www.imdb.com/search/title/?year=1959&title_type=feature
+  oscars_url: https://www.oscars.org/oscars/ceremonies/1960
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(ttmc)
+```
+
+# The Times
+
+```{r factoids}
+factoid_table(
+  year = params$year, 
+  us_pres = "Dwight D. Eisenhower",
+  best_pic = "BEN-HUR",
+  ticket_price = 0.51)
+```
+
+For `r params$month`, we head to [`r params$year`](`r params$imdb_year_url`). This year featured classics like *North By Northwest* and *Some Like It Hot*, along with stranger selections like Ed Wood's cult-classic *Plan 9 From Outer Space*. Disney released *Sleeping Beauty*, its first animated feature filmed in 70mm -- this was stunningly beautiful but coincidentally marked the end of their expensive, hand-painted backgrounds. And on the darker side, 1959 saw two Oscar nominated crime dramas: the canonical courtroom film *Anatomy Of A Murder* and the coming of age French drama *The 400 Blows*. But for our road-trip pick, we went with the absolute king of the Oscars that year...
+
+```{r posters-build, eval=FALSE}
+img_files <- list.files("images/posters", pattern = ".jpg", full.names = TRUE)
+plot_posters(img_files)
+ggplot2::ggsave("images/movie-posters.png", height = 2, width = 8)
+```
+
+```{r posters-show, echo=FALSE, layout="l-body-outset", fig.cap="Source images from [IMDB](https://www.imdb.com)"}
+knitr::include_graphics("images/movie-posters.png")
+```
+
+
+# The `r params$year` Selection
+
+For our `r params$year` time-capsule selection, we are watching...<br><br>
+[**`r params$movie`**](`r params$imdb_movie_url`),
+Directed by William Wyler, Starring Charlton Heston.<br><br>
+This epic from Metro-Goldwyn-Mayer (MGM) absolutely crushed the Oscars that year. It received 12 nominations and **won 11 of those**^[[Oscars 1960](`r params$oscars_url`)]: Actor, Supporting Actor, Directing, Best Picture, Art Direction (color), Cinematography (color), Costume Design (color), Film Editing, Music, Sound, and Special Effects, and Writing (adapted screenplay). After 60 years, it still holds the most Academy Awards for a single film, tied with *Titanic* (1997) and *Lord of the Rings: Return of the King* (2003)^[Wikipedia [Academy Award records](https://en.wikipedia.org/wiki/List_of_Academy_Award_records)]. All three of those are 3h+ epics, but *BEN-HUR* was the first, the longest (at 212 minutes), and the only one with an intermission. 
+
+<aside>
+```{r, fig.cap=glue::glue("From [IMDB]({url})", url = params$imdb_movie_url)}
+knitr::include_graphics("images/ben-hur.jpg")
+```
+</aside>
+
+```{r, fig.cap=glue::glue("From [IMDB]({url})", url = params$imdb_movie_url), out.width="100%"}
+knitr::include_graphics("images/clips/MV5BODdiMGJiNGQtODUzMS00MmY0LWE0ZDAtNDgxMWQ2M2VmOGZmXkEyXkFqcGdeQXVyMjMzMDI4MjQ@._V1_SX1777_CR0,0,1777,644_AL_.jpg")
+```
+
+MGM was struggling financially at the time, and this movie was a huge gamble by the studio, based in part on the success of the biblical epic *The Ten Commandments* (1956) by Paramount (also starring Charlton Heston). The film's budget began at \$7M and eventually grew to over \$15M (~$133M today), making it the most expensive film ever produced at the time^[[BEN-HUR Wkipedia](https://en.wikipedia.org/wiki/Ben-Hur_(1959_film))]. The gamble paid off -- it was number one at the box-office for 6 months, rising to become the second highest grossing film of all-time (at the time) and saving MGM from ruin.
+
+
+### A Circular Road
+
+This story chronicles the painful fall and unrelenting rise of Judah Ben-Hur (Charlton Heston). It's a circular epic that starts with Judah as a wealthy Jewish prince and merchant, has him lose everything to wander for years as a galley slave, and ends with his heroic return to exact revenge on his betrayor and reunite with his family. It's a road-trip transformation for sure, where *years* go by on the trail and on the seas as Judah struggles for a way home. 
+
+```{r clips-build, eval=FALSE, fig.height=5, fig.width=13}
+img_files <- c(
+  "images/clips/MV5BMTQyMjU4NjU3N15BMl5BanBnXkFtZTcwODEyNTQ5Ng@@._V1_SY1000_CR0,0,1293,1000_AL_.jpg",
+  # "images/clips/MV5BMjE0NzAwOTA1OV5BMl5BanBnXkFtZTcwMzEyNTQ5Ng@@._V1_SY1000_CR0,0,1518,1000_AL_.jpg",
+  "images/clips/MV5BOTQ4NDA0NjE5MF5BMl5BanBnXkFtZTcwNzAyNTQ5Ng@@._V1_SY1000_CR0,0,1006,1000_AL_.jpg",
+  "images/clips/MV5BMTk4NzAyMDU5Ml5BMl5BanBnXkFtZTcwMzgyNTQ5Ng@@._V1_.jpg"
+)
+plot_posters(img_files)
+ggplot2::ggsave("images/ben-hur-clips.png", height = 5, width = 13)
+```
+
+```{r clips-show, echo=FALSE, layout="l-page", fig.cap="Source images from [IMDB](https://www.imdb.com)"}
+knitr::include_graphics("images/ben-hur-clips.png")
+```
+
+Ben-Hur's circular path is echoed in the famous chariot race climax, a literal race in circles where he battles his childhood friend Messala (Stephen Boyd). This scene alone cost MGM \$1M to film over 5 weeks, but it resulted in 9 minutes of some of the greatest action of cinema history. 
+
+```{r, fig.cap=glue::glue("From [IMDB]({url})", url = params$imdb_movie_url), out.width="100%"}
+knitr::include_graphics("images/clips/MV5BMjI2NTQ2NzEwNF5BMl5BanBnXkFtZTcwNDEyNTQ5Ng@@._V1_SY1000_CR0,0,1302,1000_AL_.jpg")
+```
+
+*BEN-HUR* is a story about friendship, betrayal, and a fall from grace; about vengence, hope, redemption, and eventual salvation. It's a story so epic that Jesus of Nazareth is just a side-plot, with less screen time than Judah's leprosy stricken sister Miriam (Martha Scott). It's our most grueling and triumphant road-trip yet!
+
+```{r, fig.cap=glue::glue("From [IMDB]({url})", url = params$imdb_movie_url), layout="l-page", out.width="100%"}
+knitr::include_graphics("images/clips/MV5BY2MyNjFiNzQtZTgzYi00Zjc4LTkwMTAtODA3ZDUxNGY5MGNlXkEyXkFqcGdeQXVyMjMzMDI4MjQ@._V1_SX1777_CR0,0,1777,644_AL_.jpg")
+```
